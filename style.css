@@ -1,12 +1,12 @@
 :root{
-  --bg:#0B0F17;
-  --panel:#161F30;
-  --panel-2:#1C2740;
-  --line:#2A3A52;
-  --cold:#00E5FF;
-  --hot:#FF9100;
-  --text:#FFFFFF;
-  --muted:#8A99AD;
+  --bg:#F8F9FA;
+  --panel:#FFFFFF;
+  --panel-2:#F1F3F5;
+  --line:#E9ECEF;
+  --primary:#0056B3;
+  --alert:#DC3545;
+  --text:#212529;
+  --muted:#6C757D;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
@@ -34,7 +34,7 @@ a{ color:inherit; }
 /* ---------- NAV ---------- */
 nav{
   position:sticky; top:0; z-index:20;
-  background:rgba(14,17,22,0.88);
+  background:rgba(248,249,250,0.88);
   backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
@@ -52,12 +52,12 @@ nav .wrap{
 }
 .logo-dot{
   width:9px; height:9px; border-radius:50%;
-  background:linear-gradient(135deg, var(--cold), var(--hot));
+  background:var(--primary);
 }
 .navlinks{ display:flex; gap:28px; font-size:0.92rem; color:var(--muted); }
 .navlinks a{ text-decoration:none; transition:color .15s; padding:4px 0; border-bottom:2px solid transparent; }
 .navlinks a:hover{ color:var(--text); }
-.navlinks a.active{ color:var(--text); border-bottom-color:var(--hot); }
+.navlinks a.active{ color:var(--text); border-bottom-color:var(--primary); }
 @media (max-width:760px){ .navlinks{ display:none; } }
 
 /* ---------- HERO (home) ---------- */
@@ -99,8 +99,12 @@ header.hero{
   font-family:inherit;
 }
 .btn-primary{
-  background:linear-gradient(135deg, var(--hot), #CC7300);
+  background:var(--primary);
   color:#fff;
+  transition:background .15s;
+}
+.btn-primary:hover{
+  background:#004494;
 }
 .btn-ghost{
   border-color:var(--line);
@@ -115,7 +119,7 @@ header.page-head{
 }
 .page-head .eyebrow{
   font-size:0.8rem;
-  color:var(--hot);
+  color:var(--primary);
   margin-bottom:10px;
 }
 .page-head h1{
@@ -146,12 +150,12 @@ header.page-head{
 }
 .live-pulse{
   width:7px; height:7px; border-radius:50%;
-  background:var(--hot);
+  background:var(--primary);
   animation:pulse 2.2s ease-in-out infinite;
 }
 @keyframes pulse{
-  0%,100%{ opacity:1; box-shadow:0 0 0 0 rgba(232,98,44,0.5);}
-  50%{ opacity:0.55; box-shadow:0 0 0 6px rgba(232,98,44,0);}
+  0%,100%{ opacity:1; box-shadow:0 0 0 0 rgba(0,86,179,0.5);}
+  50%{ opacity:0.55; box-shadow:0 0 0 6px rgba(0,86,179,0);}
 }
 .scene{
   width:100%;
@@ -198,7 +202,7 @@ section p.section-lede{
 }
 .compare li:first-child{ border-top:none; }
 .compare .withignis li{ color:var(--text); }
-.compare .withignis li::before{ content:"—"; color:var(--hot); margin-right:8px; }
+.compare .withignis li::before{ content:"—"; color:var(--primary); margin-right:8px; }
 .compare .today li::before{ content:"—"; color:var(--muted); margin-right:8px; }
 
 /* ---------- CATEGORIES ---------- */
@@ -214,9 +218,9 @@ section p.section-lede{
   padding:28px;
   background:var(--panel);
   border:1px solid var(--line);
-  border-top:3px solid var(--cold);
+  border-top:3px solid var(--primary);
 }
-.cat.hot{ border-top-color:var(--hot); }
+.cat.hot{ border-top-color:var(--primary); }
 .cat .tag{ font-size:0.75rem; color:var(--muted); margin-bottom:10px; }
 .cat h3{ font-size:1.25rem; margin-bottom:12px; }
 .cat p{ color:var(--muted); font-size:0.95rem; margin-bottom:16px; }
@@ -246,7 +250,7 @@ section p.section-lede{
 .feature .num{
   font-family:'IBM Plex Mono', monospace;
   font-size:0.78rem;
-  color:var(--hot);
+  color:var(--primary);
   margin-bottom:10px;
 }
 .feature h3{ font-size:1.08rem; margin-bottom:8px; }
@@ -276,7 +280,7 @@ section p.section-lede{
   display:flex; align-items:center; justify-content:center;
   font-family:'IBM Plex Mono', monospace;
   font-size:0.85rem;
-  color:var(--hot);
+  color:var(--primary);
   margin-bottom:16px;
 }
 .flow-step h3{ font-size:1.05rem; margin-bottom:8px; }
@@ -367,7 +371,7 @@ section p.section-lede{
 }
 .field input:focus, .field select:focus, .field textarea:focus{
   outline:none;
-  border-color:var(--hot);
+  border-color:var(--primary);
 }
 .field textarea{ resize:vertical; min-height:88px; }
 .form-note{ margin-top:14px; font-size:0.82rem; color:var(--muted); }
