@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technology &amp; Fusion — Ignis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Ignis</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="put-diagnostics.html">PUT Diagnostics</a>
+      <a href="chamber-infrastructure.html">Chamber Infrastructure</a>
+      <a href="technology.html" class="active">Technology &amp; Fusion</a>
+      <a href="contact.html">Alpha Access</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow mono">HOW IT WORKS</div>
+    <h1>Why point-of-capture fusion, and why general AI doesn't solve this</h1>
+    <p class="lede">The technical case for a chamber-specific logger, in plain terms: what "fusion" actually means, why it has to happen at the edge, and why AI built for factories doesn't transfer to environmental chambers.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>The problem with today's stack</h2>
+    <p class="section-lede">A conventional setup pairs a hardware logger — reading temperature, humidity, and other channels — with a separate thermal or IR camera and its own software. Each writes its own file, on its own clock.</p>
+    <div class="feature-row">
+      <div class="feature">
+        <div class="num mono">TIME DRIFT</div>
+        <h3>Matching timestamps by hand</h3>
+        <p>A CSV export from a logger and a video file from a separate thermal camera rarely land on the same clock. Someone has to line them up manually before the data means anything — and small drift compounds over a long cycle.</p>
+      </div>
+      <div class="feature">
+        <div class="num mono">TOOL STACK</div>
+        <h3>Multiple licenses, one answer</h3>
+        <p>Logger software, thermal analysis software, and whatever pulls it together for a report — each with its own license, its own learning curve, and its own place for something to go wrong.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What point-of-capture fusion means</h2>
+    <p class="section-lede">Instead of two tools writing two files, Ignis captures environmental sensor data and thermal/infrared imagery through one unit, tied to a single timestamp at the moment of capture — not reconciled afterward. That single synchronized stream is what the on-device AI actually analyzes, which is what makes real-time flagging possible instead of after-the-fact review.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why general factory AI doesn't transfer</h2>
+    <p class="section-lede">This isn't a case of nobody having built AI-plus-thermal before — it's that what exists is built for a different problem.</p>
+    <table class="spec-table">
+      <tr>
+        <th>Approach</th>
+        <th>What it's built for</th>
+        <th>Gap for chamber testing</th>
+      </tr>
+      <tr>
+        <td>Vaisala (DL-series, viewLinc)</td>
+        <td class="muted">High-accuracy hardware logging, GxP-compliant reporting</td>
+        <td class="muted">Data logging and dashboards, no native AI interpretation or imaging</td>
+      </tr>
+      <tr>
+        <td>AES chamber instrumentation</td>
+        <td class="muted">On-board data logging, live/historical visualization</td>
+        <td class="muted">Same pattern — logger plus software, human still reads and interprets</td>
+      </tr>
+      <tr>
+        <td>General factory-floor AI (e.g. Eigen, iFactory)</td>
+        <td class="muted">Continuous monitoring of steady-running assets — motors, welds, equipment</td>
+        <td class="muted">Trained on steady-state conditions, not a short cycle deliberately pushed through extreme swings</td>
+      </tr>
+      <tr>
+        <td>Ignis</td>
+        <td class="muted">Chamber-native, edge-fused, built around the hot/cold/altitude test cycle itself</td>
+        <td class="muted">—</td>
+      </tr>
+    </table>
+    <p class="section-lede" style="margin-top:20px; font-size:0.88rem;">Based on current publicly available product information as of 2026; we'll keep this updated as the competitive landscape moves.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h3>Want the technical detail in writing?</h3>
+        <p>Request the spec sheet for the full architecture as it stands today.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Request spec sheet</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>Ignis — working name, pending domain check</span>
+    <span>&copy; 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

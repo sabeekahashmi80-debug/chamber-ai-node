@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUT Diagnostics — Ignis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Ignis</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="put-diagnostics.html" class="active">PUT Diagnostics</a>
+      <a href="chamber-infrastructure.html">Chamber Infrastructure</a>
+      <a href="technology.html">Technology &amp; Fusion</a>
+      <a href="contact.html">Alpha Access</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow mono">DUAL-ENGINE · CATEGORY A</div>
+    <h1>PUT diagnostics: catch the failure before the part does</h1>
+    <p class="lede">Stop catching board failures after the test cycle already ruined the prototype. Ignis watches the product under test — PCBAs and electronic sub-assemblies — through the full thermal shock and vibration profile, and flags the early signs, not just the wreckage.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What it watches for</h2>
+    <p class="section-lede">Built specifically for automotive PCBA and electronic sub-assemblies going through hot, cold, and vibration cycles — not general factory-floor monitoring repurposed for a chamber.</p>
+    <div class="feature-row">
+      <div class="feature">
+        <div class="num mono">01</div>
+        <h3>Micro-thermal runaway prediction</h3>
+        <p>Tracks subtle temperature deltas on individual components — MCUs, MOSFETs, capacitors — to flag early degradation before it cascades into a structural short.</p>
+      </div>
+      <div class="feature">
+        <div class="num mono">02</div>
+        <h3>Solder joint stress monitoring</h3>
+        <p>Watches for microscopic fractures and thermal impedance shifts across BGA and surface-mount joints under vibration or rapid temperature cycling.</p>
+      </div>
+      <div class="feature">
+        <div class="num mono">03</div>
+        <h3>Fault code mapping</h3>
+        <p>Where the board streams live telemetry — CAN bus or Automotive Ethernet — Ignis can align a physical hotspot in time with the diagnostic fault code it produces, so an engineer sees cause and effect together instead of two separate logs to reconcile by hand.</p>
+      </div>
+      <div class="feature">
+        <div class="num mono">04</div>
+        <h3>Early flagging, not just post-mortem</h3>
+        <p>Anomalies surface while the cycle is still running, so a test can be paused or adjusted before a prototype is destroyed rather than after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why this is a different problem than factory-floor AI</h2>
+    <p class="section-lede">General predictive-maintenance AI is trained to watch a motor or a weld run continuously in steady conditions. A PCBA under test is deliberately pushed through extreme, rapidly-changing temperatures on a short cycle — the failure signatures and the noise look completely different, which is why chamber-specific detection matters. More on this on the <a href="technology.html" style="color:var(--hot);">Technology &amp; Fusion</a> page.</p>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="cta-box">
+      <div>
+        <h3>Running PCBA thermal or vibration profiles today?</h3>
+        <p>Tell us about your current chamber setup and we'll walk you through where Ignis fits.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Request spec sheet</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>Ignis — working name, pending domain check</span>
+    <span>&copy; 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

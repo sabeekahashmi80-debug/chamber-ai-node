@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Access — Ignis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="logo-dot"></span>Ignis</a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="put-diagnostics.html">PUT Diagnostics</a>
+      <a href="chamber-infrastructure.html">Chamber Infrastructure</a>
+      <a href="technology.html">Technology &amp; Fusion</a>
+      <a href="contact.html" class="active">Alpha Access</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow mono">GET IN TOUCH</div>
+    <h1>Request the spec sheet, or join the software alpha</h1>
+    <p class="lede">We're working with a small number of test engineers and validation directors to shape the first version. No hardware required to start — the software alpha runs on your existing chamber logs.</p>
+  </div>
+</header>
+
+<section class="cta-section">
+  <div class="wrap">
+    <div class="form-grid">
+      <div class="form-panel">
+        <form onsubmit="event.preventDefault(); this.querySelector('.form-note').textContent='Thanks — we\'ll be in touch shortly.';">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" name="role">
+              <option>Test engineer</option>
+              <option>Validation director</option>
+              <option>QA manager</option>
+              <option>Founder / investor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="interest">What are you looking for?</label>
+            <select id="interest" name="interest">
+              <option>Technical spec sheet</option>
+              <option>Software alpha (bring your own chamber logs)</option>
+              <option>General inquiry</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="setup">Tell us about your current chamber setup (optional)</label>
+            <textarea id="setup" name="setup" placeholder="e.g. hot/cold/altitude cycles, current loggers and software in use"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; text-align:center;">Submit request</button>
+          <p class="form-note">This is a concept-stage form — connect it to your inbox or CRM before it goes live.</p>
+        </form>
+      </div>
+
+      <div class="side-panel">
+        <h3>What happens next</h3>
+        <ul class="side-list">
+          <li>
+            <strong>Spec sheet requests</strong>
+            We'll send the current technical architecture and roadmap directly — no sales call required.
+          </li>
+          <li>
+            <strong>Software alpha</strong>
+            You bring historical chamber logs and thermal footage; we show you what the fused analysis would have caught.
+          </li>
+          <li>
+            <strong>Early hardware access</strong>
+            Reserved for alpha participants once the first physical units are ready to deploy alongside your existing loggers.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>Ignis — working name, pending domain check</span>
+    <span>&copy; 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
