@@ -57,9 +57,21 @@ nav .wrap{
   background:var(--primary);
 }
 .navlinks{ display:flex; gap:28px; font-size:0.92rem; color:var(--muted); }
-.navlinks a{ text-decoration:none; transition:color .15s; padding:4px 0; border-bottom:2px solid transparent; }
+.navlinks a{ text-decoration:none; transition:color .15s; padding:4px 0; position:relative; }
+.navlinks a::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:-2px;
+  height:2px;
+  background:var(--primary);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .2s ease;
+}
 .navlinks a:hover{ color:var(--text); }
-.navlinks a.active{ color:var(--text); border-bottom-color:var(--primary); }
+.navlinks a:hover::after{ transform:scaleX(1); }
+.navlinks a.active{ color:var(--text); }
+.navlinks a.active::after{ transform:scaleX(1); }
 @media (max-width:760px){ .navlinks{ display:none; } }
 
 /* ---------- HERO (home) ---------- */
@@ -206,7 +218,9 @@ header.page-head{
   height:320px;
   object-fit:cover;
   display:block;
+  transition:transform .4s ease;
 }
+.photo-hook:hover img{ transform:scale(1.035); }
 .glass-panel{
   position:absolute;
   left:16px; right:16px; bottom:16px;
@@ -362,6 +376,14 @@ section.section-alt{ background:var(--panel-2); }
 section h2{
   font-size:clamp(1.5rem, 2.6vw, 2rem);
   max-width:22ch;
+  padding-left:16px;
+  border-left:4px solid var(--primary);
+}
+section.section-alt h2{ border-left-color:#1E3A8A; }
+.process-band h2{ border-left-color:#60A5FA; }
+header.page-head h1{
+  padding-left:18px;
+  border-left:5px solid var(--primary);
 }
 section p.section-lede{
   margin-top:14px;
@@ -414,6 +436,11 @@ section p.section-lede{
   border:1px solid var(--line);
   border-top:3px solid var(--primary);
   box-shadow:var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.cat:hover{
+  transform:translateY(-3px);
+  box-shadow:0 2px 4px rgba(15,23,42,0.06), 0 14px 32px rgba(15,23,42,0.09);
 }
 .cat.hot{ border-top-color:var(--primary); }
 .cat .tag{ font-size:0.75rem; color:var(--muted); margin-bottom:10px; }
@@ -442,6 +469,11 @@ section p.section-lede{
   border-radius:10px;
   background:var(--panel);
   box-shadow:var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.feature:hover{
+  transform:translateY(-3px);
+  box-shadow:0 2px 4px rgba(15,23,42,0.06), 0 14px 32px rgba(15,23,42,0.09);
 }
 .feature .num{
   font-family:'IBM Plex Mono', monospace;
@@ -517,6 +549,8 @@ section p.section-lede{
 .spec-table td{ color:var(--text); }
 .spec-table tr:last-child td{ border-bottom:none; }
 .spec-table td.muted{ color:var(--muted); }
+.spec-table tbody tr{ transition:background .15s; }
+.spec-table tbody tr:hover{ background:var(--panel-2); }
 
 /* ---------- CTA ---------- */
 .cta-section{ border-bottom:none; text-align:left; }
