@@ -28,10 +28,17 @@
     <div>
       <h1>One Smart Logger. Not Four Tools and a Spreadsheet.</h1>
       <p class="lede">The chamber-specific environmental logger built for native AI anomaly detection and fused thermal/infrared imaging — one point of capture instead of a stack of loggers, cameras, and licensed software.</p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary">Request spec sheet &amp; join alpha</a>
-        <a href="technology.html" class="btn btn-ghost">See how it works</a>
-      </div>
+      <form class="hero-inline-form" onsubmit="event.preventDefault(); this.querySelector('.hero-form-note').textContent='Thanks — we\'ll be in touch shortly.';">
+        <input type="email" placeholder="Work email" required>
+        <select>
+          <option>Test engineer</option>
+          <option>Validation director</option>
+          <option>QA manager</option>
+          <option>Other</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Request access</button>
+      </form>
+      <p class="hero-form-note">Or <a href="technology.html">see how it works</a> first — no form required.</p>
     </div>
     <div class="media-card">
       <svg viewBox="0 0 480 360" class="media-bg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated view of a drive-in automotive environmental test chamber with a vehicle inside, sensor telemetry overlaid">
@@ -200,25 +207,30 @@
   </div>
 </section>
 
-<section id="how" class="section-alt">
+<section id="how" class="process-band">
   <div class="wrap">
     <h2>How Ignis fits into a run you already know</h2>
-    <p class="section-lede">No new process to learn — Ignis replaces the layers between the chamber and your report, not the test itself.</p>
-    <div class="flow">
-      <div class="flow-step">
-        <div class="flow-num mono">1</div>
-        <h3>Mount and connect</h3>
-        <p>One unit takes the place of your existing loggers and thermal camera, reading every channel in the chamber.</p>
+    <p class="section-lede">No new process to learn — every chamber run still follows the same four stages. Ignis changes what happens at each one.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-tag">01 · MOUNT &amp; CONNECT</div>
+        <h3>Replace the stack, not the setup</h3>
+        <p>One unit takes the place of your existing loggers and thermal camera, wired into the same chamber you already run — no new infrastructure, no new training.</p>
       </div>
-      <div class="flow-step">
-        <div class="flow-num mono">2</div>
-        <h3>Run the test as normal</h3>
-        <p>Hot, cold, altitude, thermal shock — Ignis logs and interprets continuously through the cycle, live.</p>
+      <div class="process-step">
+        <div class="step-tag">02 · RUN THE CYCLE</div>
+        <h3>Hot, cold, altitude, thermal shock</h3>
+        <p>Ignis logs environmental and thermal/IR data continuously through the full cycle, every channel sharing a single timestamp from the moment of capture.</p>
       </div>
-      <div class="flow-step">
-        <div class="flow-num mono">3</div>
-        <h3>Get the answer, not the raw files</h3>
-        <p>Anomalies flagged in real time, a report ready at the end — no separate analysis step.</p>
+      <div class="process-step">
+        <div class="step-tag">03 · FUSE &amp; FLAG</div>
+        <h3>Analysis runs live, not afterward</h3>
+        <p>The on-device AI reads the same synchronized stream it captured — PUT faults and chamber faults both surface the moment they appear, not after a post-run review.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-tag">04 · REPORT &amp; SIGN OFF</div>
+        <h3>One record, ready to hand over</h3>
+        <p>A single report is generated directly from the run — the data, the imagery, and the flagged anomalies together, with nothing to reconcile by hand.</p>
       </div>
     </div>
   </div>
