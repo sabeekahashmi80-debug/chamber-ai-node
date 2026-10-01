@@ -141,7 +141,7 @@ header.page-head{
 }
 .page-head h1{
   font-size:clamp(1.9rem, 3.6vw, 2.6rem);
-  max-width:22ch;
+  max-width:40ch;
 }
 .page-head p.lede{
   margin-top:16px;
@@ -308,6 +308,11 @@ header.page-head{
 .chart-copy p{ color:var(--muted); font-size:0.95rem; margin-bottom:14px; }
 .chart-copy p:last-child{ margin-bottom:0; }
 .chart-copy strong{ color:var(--text); }
+.process-band .chart-copy h3{ color:#fff; }
+.process-band .chart-copy p{ color:#CBD5E1; }
+.process-band .chart-copy strong{ color:#fff; }
+.process-band .chart-legend span{ color:#CBD5E1; }
+.process-band .compare-label{ color:#94A3B8; }
 
 /* ---------- PROCESS BAND (dark, structured sequence) ---------- */
 .process-band{
@@ -398,7 +403,7 @@ section{ padding:76px 0; border-bottom:1px solid var(--line); }
 section.section-alt{ background:var(--panel-2); }
 section h2{
   font-size:clamp(1.5rem, 2.6vw, 2rem);
-  max-width:22ch;
+  max-width:36ch;
   position:relative;
   padding-top:20px;
 }
