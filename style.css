@@ -45,33 +45,34 @@ nav .wrap{
   height:64px;
 }
 .logo{
-  font-family:'Space Grotesk', sans-serif;
-  font-weight:700;
-  font-size:1.25rem;
-  display:flex; align-items:center; gap:8px;
+  display:flex; align-items:center; gap:10px;
   text-decoration:none;
   color:var(--text);
+}
+.logo-text{ display:flex; flex-direction:column; line-height:1.15; }
+.logo-name{ font-weight:700; font-size:1.1rem; }
+.logo-tag{
+  font-family:ui-monospace, "Cascadia Code", "Segoe UI Mono", "Roboto Mono", Consolas, monospace;
+  font-size:0.6rem;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:1px;
 }
 .logo-dot{
   width:9px; height:9px; border-radius:50%;
   background:var(--primary);
+  flex-shrink:0;
 }
-.navlinks{ display:flex; gap:28px; font-size:0.92rem; color:var(--muted); }
-.navlinks a{ text-decoration:none; transition:color .15s; padding:4px 0; position:relative; }
-.navlinks a::after{
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:-2px;
-  height:2px;
-  background:var(--primary);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .2s ease;
+.navlinks{ display:flex; gap:6px; font-size:0.92rem; color:var(--muted); }
+.navlinks a{
+  text-decoration:none;
+  padding:8px 14px;
+  border-radius:8px;
+  transition:background .15s, color .15s;
 }
-.navlinks a:hover{ color:var(--text); }
-.navlinks a:hover::after{ transform:scaleX(1); }
-.navlinks a.active{ color:var(--text); }
-.navlinks a.active::after{ transform:scaleX(1); }
+.navlinks a:hover{ background:var(--panel-2); color:var(--text); }
+.navlinks a.active{ background:var(--primary); color:#fff; }
 @media (max-width:760px){ .navlinks{ display:none; } }
 
 /* ---------- HERO (home) ---------- */
