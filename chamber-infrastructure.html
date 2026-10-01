@@ -1,110 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chamber Infrastructure — Ignis</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Infrastructure Safeguards - Ignis</title>
+    <script src="https://tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-[#F8FAFC] text-[#0F172A] font-sans antialiased">
 
-<nav>
-  <div class="wrap">
-    <a href="index.html" class="logo"><span class="logo-dot"></span>Ignis</a>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="put-diagnostics.html">PUT Diagnostics</a>
-      <a href="chamber-infrastructure.html" class="active">Chamber Infrastructure</a>
-      <a href="technology.html">Technology &amp; Fusion</a>
-      <a href="contact.html">Alpha Access</a>
-    </div>
-  </div>
-</nav>
+    <!-- Top Navigation Bar -->
+    <nav class="border-b border-slate-200 bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 font-bold text-lg tracking-tight">
+                <a href="index.html" class="hover:opacity-80 transition"><span class="text-[#2563EB]">●</span> Ignis</a>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-slate-900 transition">Home</a>
+                <a href="index.html#put" class="hover:text-slate-900 transition">PUT Diagnostics</a>
+                <a href="#" class="text-[#2563EB]">Chamber Infrastructure</a>
+                <a href="index.html#technology" class="hover:text-slate-900 transition">Technology & Fusion</a>
+            </div>
+            <a href="index.html#alpha" class="bg-[#2563EB] hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-lg shadow-sm transition">Alpha Access</a>
+        </div>
+    </nav>
 
-<header class="page-head">
-  <div class="wrap">
-    <div class="eyebrow mono">DUAL-ENGINE · CATEGORY B</div>
-    <h1>Chamber infrastructure: a bad seal shouldn't read as a bad part</h1>
-    <p class="lede">A test result is only as good as the chamber running it. Ignis continuously watches the enclosure itself — seals, gaskets, airflow, and atmosphere — so a chamber fault never gets mistaken for a product failure, and never quietly invalidates a result nobody caught.</p>
-  </div>
-</header>
+    <!-- Sub-page Header / Hero -->
+    <header class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-left">
+        <div class="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider mb-3">Dual-Engine · Category B</div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Chamber Infrastructure & Safety Safeguards
+        </h1>
+        <p class="mt-4 text-xl text-slate-600 max-w-3xl leading-relaxed">
+            A passed component inside a failing test chamber is an invalid result. Ignis continuously monitors your environmental envelope to ensure perfect compliance uniformity.
+        </p>
+    </header>
 
-<section class="section-alt">
-  <div class="wrap">
-    <h2>What it watches for</h2>
-    <p class="section-lede">Continuous, automated monitoring of the testing envelope itself, not just the part inside it.</p>
+    <!-- Visual Banner Area using Absolute URL -->
+    <section class="max-w-5xl mx-auto px-6 mb-16">
+        <div class="relative bg-white p-3 rounded-2xl border border-slate-200 shadow-sm">
+            <img src="https://simultech.com.au" alt="Environmental Test Chamber Boundary Monitoring" class="w-full h-80 object-cover rounded-xl">
+            <div class="absolute top-6 right-6 bg-slate-900/90 backdrop-blur-sm px-3 py-1.5 rounded border border-slate-700 font-mono text-[11px] text-emerald-400">
+                ● INFRASTRUCTURE ENGINE: ACTIVE
+            </div>
+        </div>
+    </section>
 
-    <div class="content-sidebar-grid" style="margin-top:40px;">
-      <div>
-        <div class="feature-row" style="margin-top:0;">
-          <div class="feature">
-            <div class="num mono">01</div>
-            <h3>Gasket &amp; seal leak tracking</h3>
-            <p>Watches the chamber door boundary for the microscopic hot or cold air plumes that indicate a seal is degrading — before it drifts the chamber out of tolerance.</p>
-          </div>
-          <div class="feature">
-            <div class="num mono">02</div>
-            <h3>Condensation &amp; frost detection</h3>
-            <p>Flags localized moisture pooling or early frost formation on chamber walls, often visible well before internal humidity sensors register a shift.</p>
-          </div>
-          <div class="feature">
-            <div class="num mono">03</div>
-            <h3>Airflow &amp; heating uniformity</h3>
-            <p>Maps blocked vents or a failing heating element bank inside the chamber, so temperature uniformity across the test volume stays where it's supposed to be.</p>
-          </div>
-          <div class="feature">
-            <div class="num mono">04</div>
-            <h3>One record, not two stories</h3>
-            <p>Chamber-side and product-side data share the same timestamp, so if a result looks off, you can tell immediately whether it was the part or the chamber.</p>
-          </div>
+    <!-- Core Features Grid -->
+    <section class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        
+        <!-- Feature 1 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="text-2xl mb-4">🚪</div>
+            <h3 class="text-lg font-bold text-slate-900">Gasket & Seal Leak Tracking</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                Uses wide-angle Short-Wave Infrared (SWIR) to watch door boundaries. It automatically catches microscopic thermal plumes escaping worn gaskets *before* internal air temperatures fall out of calibration bounds.
+            </p>
         </div>
 
-        <div class="photo-hook">
-          <img src="https://raw.githubusercontent.com/sabeekahashmi80-debug/chamber-ai-node/main/assets/Valarm-Tools-Cloud-Industrial-IoT-Remote-Monitoring-Sensor-Telemetry-Real-Time-Sensors-Dashboard-IIoT-1.jpg" alt="Remote industrial IoT sensor telemetry and monitoring dashboard" onerror="this.parentElement.style.display='none';">
+        <!-- Feature 2 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="text-2xl mb-4">❄️</div>
+            <h3 class="text-lg font-bold text-slate-900">Condensation & Frost Alerts</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                Detects moisture pooling or microscopic frost formations on chamber walls or safety shields hours before traditional relative humidity sensors notice a systemic atmospheric shift.
+            </p>
         </div>
-      </div>
 
-      <div class="sidebar-callout">
-        <div class="tag mono">AT A GLANCE</div>
-        <h3>Chamber infrastructure</h3>
-        <ul>
-          <li><strong>Built for</strong>Hot, cold &amp; altitude test chambers</li>
-          <li><strong>Watches</strong>Seals, condensation, airflow uniformity</li>
-          <li><strong>Why it matters</strong>A bad chamber never gets read as a bad part</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary">Request spec sheet</a>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Feature 3 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="text-2xl mb-4">💨</div>
+            <h3 class="text-lg font-bold text-slate-900">Thermal Uniformity Mapping</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                Identifies localized dead zones, failing heating elements, or ventilation blockages inside the enclosure structure, safeguarding compliance requirements like MIL-STD-810 envelopes.
+            </p>
+        </div>
+    </section>
 
-<section>
-  <div class="wrap">
-    <h2>Why this matters for compliance</h2>
-    <p class="section-lede">Standards like IATF 16949, AS9100, and DO-160 depend on chambers holding a validated envelope throughout a run. A seal degrading mid-test, undetected, is exactly the kind of gap that turns up in an audit. Continuous chamber-side monitoring is designed to close that gap — see <a href="technology.html" style="color:var(--primary);">how the fusion engine keeps it all on one timeline</a>.</p>
-  </div>
-</section>
+    <!-- Deep Technical Deep-Dive Section (Full-Width Gray Section Break) -->
+    <section class="bg-[#F1F5F9] border-y border-slate-200 py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8">The Infrastructure Deficit: Why Traditional Monitors Fail</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm text-slate-600 leading-relaxed">
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">The Legacy Status Quo</h4>
+                    <p class="mb-4">
+                        Standard loggers sit passively inside a chamber box. If a seal breaks, they simply record the ambient temperature drop. They cannot tell you *why* it dropped—forcing engineers to spent hours debugging whether the heating assembly broke, the door was open, or the product failed.
+                    </p>
+                    <p>
+                        This manual trial-and-error cycle risks invalidating weeks of profile data data logging, stalling high-stakes qualification timelines.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">The Ignis Advantage</h4>
+                    <p class="mb-4">
+                        By integrating multispectral imaging with edge AI at the point of capture, Ignis separates the environment data from the hardware data. If a gasket fails, the system triggers an anomaly event pinpointing the structural coordinates of the leak immediately.
+                    </p>
+                    <p>
+                        You get instant, audit-ready data lineage that proves your testing environment remained perfectly uniform throughout the entire compliance execution block.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="cta-section">
-  <div class="wrap">
-    <div class="cta-box">
-      <div>
-        <h3>Chasing intermittent chamber drift?</h3>
-        <p>Tell us what your current chamber and calibration setup looks like.</p>
-      </div>
-      <a href="contact.html" class="btn btn-primary">Request spec sheet</a>
-    </div>
-  </div>
-</section>
+    <!-- Back to Safety CTA -->
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center">
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Ready to upgrade your chamber instrumentation layout?</h3>
+        <div class="flex justify-center gap-4">
+            <a href="index.html" class="bg-[#2563EB] hover:bg-blue-700 text-white text-sm font-medium px-5 py-2.5 rounded-xl shadow-sm transition">Return to Main Dashboard</a>
+            <a href="index.html#alpha" class="border border-slate-300 hover:bg-slate-50 text-slate-700 text-sm font-medium px-5 py-2.5 rounded-xl transition">Apply for Alpha Pipeline</a>
+        </div>
+    </section>
 
-<footer>
-  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
-    <span>Ignis — working name, pending domain check</span>
-    <span>&copy; 2026</span>
-  </div>
-</footer>
+    <!-- Standard Footer Container -->
+    <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500 font-mono">
+        © 2026 Ignis Project Core. Designed for aerospace and automotive validation cells.
+    </footer>
 
 </body>
 </html>
+
+
